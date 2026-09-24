@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+
+# Local databases, logs, and secrets
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+!.env.example
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
