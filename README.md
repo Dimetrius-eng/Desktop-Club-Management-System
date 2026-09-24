@@ -1,35 +1,35 @@
-# Система управління спортивним клубом
+# Sports Club Management System
 
-Десктопна інформаційна система для обліку роботи міських спортивних секцій. Інтерфейс побудований на стандартному для Python Tkinter, дані зберігаються в MariaDB/MySQL.
+A desktop information system for managing local sports clubs and training sections. The application uses a Tkinter graphical interface and stores its data in MariaDB or MySQL.
 
-## Можливості
+## Features
 
-- Рольовий інтерфейс для адміністратора, менеджера, тренера та клієнта.
-- Керування секціями, тренерами та розкладом занять.
-- Реєстрація клієнтів, продаж абонементів, запис на тренування й облік відвідувань.
-- Персональні перегляди розкладу тренера та абонементів клієнта.
-- Звіти про доходи, виплати тренерам, клієнтів, абонементи та завантаженість секцій.
-- Пошук, фільтрація, сортування й експорт звітів.
+- Role-based workspaces for administrators, managers, trainers, and clients.
+- Manage sports sections, trainers, and training schedules.
+- Register clients, sell memberships, enroll clients in training sessions, and track attendance.
+- Show trainers their schedules and clients their memberships.
+- Generate reports on revenue, trainer payroll, clients, memberships, and section activity.
+- Search, filter, sort, and export reports.
 
-## Вимоги
+## Requirements
 
-- Windows 10/11
-- Python 3.10 або новіший із Tkinter
-- MariaDB 10.4+ або MySQL 8+
+- Windows 10 or 11
+- Python 3.10 or later with Tkinter
+- MariaDB 10.4 or later, or MySQL 8 or later
 
-Tkinter входить до стандартної інсталяції Python для Windows. Для підключення до бази потрібна залежність PyMySQL.
+Tkinter is included with the standard Python installer for Windows. The application uses PyMySQL to connect to the database.
 
-## Налаштування бази даних
+## Set Up the Database
 
-1. Встановіть і запустіть MariaDB або MySQL.
-2. Імпортуйте `sports_club.sql`. Скрипт створює базу `sports_club`, її таблиці та демонстраційні записи.
-3. Перевірте параметри з'єднання на початку `db_manager.py`: `host`, `database`, `user` і `password`. Початкові значення розраховані на локальний сервер із користувачем `root` без пароля.
+1. Install and start MariaDB or MySQL.
+2. Import `sports_club.sql`. The script creates the `sports_club` database, its tables, and demonstration records.
+3. Check the connection settings near the top of `db_manager.py`: `host`, `database`, `user`, and `password`. The defaults expect a local database server with the `root` user and no password.
 
-Дамп містить демонстраційні облікові записи й тестові дані. Не використовуйте їх із реальними даними без заміни паролів і записів.
+The SQL dump contains demonstration accounts and sample data. Replace them before using the application with real data.
 
-## Встановлення та запуск
+## Install and Run
 
-Відкрийте PowerShell у корені проєкту:
+Open PowerShell in the project root and run:
 
 ```powershell
 py -m venv .venv
@@ -39,16 +39,12 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Для входу після імпорту бази даних використовуйте демонстраційний обліковий запис адміністратора `admin` із паролем `admin123`. Інші ролі й облікові записи наведені в дампі бази.
+After importing the database, sign in with the demonstration administrator account: username `admin`, password `admin123`. The database dump contains accounts for the other roles as well.
 
-## Файли
+## Project Files
 
-- `main.py` — Tkinter-інтерфейс і функції для чотирьох ролей.
-- `db_manager.py` — підключення до бази та виконання SQL-запитів.
-- `sports_club.sql` — схема MariaDB/MySQL та демонстраційні дані.
-- `requirements.txt` — зовнішні залежності Python.
-- `.gitignore` — виключення локального середовища та службових файлів.
-
-## Опис репозиторію
-
-**Desktop sports club management system built with Python Tkinter and MariaDB/MySQL.**
+- `main.py` — Tkinter interface and workflows for all four user roles.
+- `db_manager.py` — database connection and SQL query helpers.
+- `sports_club.sql` — MariaDB/MySQL schema and demonstration data.
+- `requirements.txt` — external Python dependencies.
+- `.gitignore` — excludes local environments and generated files.
